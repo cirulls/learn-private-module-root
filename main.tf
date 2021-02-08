@@ -1,5 +1,6 @@
 provider "aws" {
-  region = var.region
+  region                  = var.region
+  skip_metadata_api_check = true
 }
 
 module "s3-webapp" {
