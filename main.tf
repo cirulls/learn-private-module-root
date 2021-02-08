@@ -1,5 +1,8 @@
 provider "aws" {
   region = var.region
+  assume_role {
+    role_arn = "arn:aws:iam::975647491380:role/S3AdminAccess"
+  }
 }
 
 module "s3-webapp" {
